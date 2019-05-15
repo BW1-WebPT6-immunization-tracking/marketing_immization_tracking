@@ -1,0 +1,291 @@
+/* ========================================= 
+CSS Functions for ease of writing
+===========================================*/
+.inline-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.abs-center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.center-text {
+  text-align: center;
+}
+.container {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* ========================================= 
+Responsive boxes & rows
+===========================================*/
+.page-wrapper {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+}
+.page-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 40px;
+}
+@media screen and (min-width: 1000px) {
+  .page-section > .container {
+    width: 876px;
+  }
+}
+.box-12 {
+  width: 100%;
+}
+.box-11 {
+  width: 91%;
+}
+.box-10 {
+  width: 83%;
+}
+.box-9 {
+  width: 75%;
+}
+.box-8 {
+  width: 66%;
+}
+.box-7 {
+  width: 58%;
+}
+.box-6 {
+  width: 50%;
+}
+.box-5 {
+  width: 41%;
+}
+.box-4 {
+  width: 33%;
+}
+.box-3 {
+  width: 25%;
+}
+.box-2 {
+  width: 16%;
+}
+.box-1 {
+  width: 8%;
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-12 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-11 {
+    width: 91%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-10 {
+    width: 83%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-9 {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-8 {
+    width: 66%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-7 {
+    width: 58%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-6 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-5 {
+    width: 41%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-4 {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-3 {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-2 {
+    width: 16%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box-mobile-1 {
+    width: 8%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-11 {
+    width: 91%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-10 {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-9 {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-8 {
+    width: 66%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-7 {
+    width: 58%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-5 {
+    width: 41%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-4 {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-3 {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-2 {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box-tablet-1 {
+    width: 8%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-11 {
+    width: 91%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-10 {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-9 {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-8 {
+    width: 66%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-7 {
+    width: 58%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-5 {
+    width: 41%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-4 {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-3 {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-2 {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box-desktop-1 {
+    width: 8%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .tablet-hidden {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
