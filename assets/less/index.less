@@ -9,3 +9,50 @@
 @import "../../components/responsiveness/responsiveness.less";
 @import "../../components/slider/slider.less";
 @import "../../components/tabs/tabs.less";
+
+* {box-sizing:border-box;}
+
+h2 {
+    font-size:2.5rem;
+    text-decoration:underline;
+    margin-bottom:15px;
+}
+
+.call-to-action {
+    text-align:center;
+    background-image:linear-gradient(red,orange);
+    height:500px;
+    h1 { 
+        padding-top:265px;
+        font-size:3rem; 
+    }
+    h3 {
+        margin:25px;
+        font-size:1.6rem;
+    }
+}
+
+.overview-item img {
+    width:70%;
+}
+
+.button {
+    background-color:grey;
+    padding: 10px 25px;
+}
+
+.primary-button {
+    .button();
+    background-color:blue;
+    color:white;
+}
+
+.default-button {
+    .button();
+}
+
+footer {
+    text-align:center;
+    background-color:black;
+    padding:25px;
+}
