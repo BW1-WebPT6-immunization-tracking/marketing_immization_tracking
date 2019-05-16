@@ -441,3 +441,29 @@ Responsive boxes & rows
     display: none !important;
   }
 }
+.hide-slide {
+  display: none;
+}
+.slider-component {
+  display: flex;
+  align-items: center;
+}
+.slider-component .previous-arrow {
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  background-color: black;
+  color: white;
+  padding: 8px;
+}
+.slider-component .forward-arrow {
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  background-color: black;
+  color: white;
+  padding: 8px;
+}
+.slider-component img {
+  width: 100%;
+}
