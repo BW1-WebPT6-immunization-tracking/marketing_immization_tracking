@@ -3,14 +3,19 @@
 class Slider {
     constructor(items) {
         this.items = items;
+        console.log('slider', this.items)
         this.forwardArrow;
         this.previousArrow;
         this.data;
 
+        // Array.from(this.items).forEach(function(item) {
+        //     console.log('yo')
+        // });
+
         this.items.forEach(item => {
-            return new SliderItem(item);
+            new SliderItem(item);
         });
-        console.log('slider created', items)
+        
     }
 
     slide (direction) {
@@ -21,13 +26,14 @@ class Slider {
 class SliderItem {
     constructor(item) {
         this.item = item;
-        console.log('slider item created');
+        console.log('hi');
     }
 }
 
+let items = document.querySelectorAll('.slider-slide');
+console.log(items)
+let slider = new Slider(items);
 
-const items = document.querySelectorAll('.slider-slide');
-const slider = new Slider(items);
 
 
 
