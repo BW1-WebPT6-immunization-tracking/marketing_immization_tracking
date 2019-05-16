@@ -3,7 +3,6 @@
 class Slider {
     constructor(items) {
         this.items = items;
-        console.log('slider', this.items)
         this.forwardArrow;
         this.previousArrow;
         this.data;
@@ -26,14 +25,13 @@ class Slider {
 class SliderItem {
     constructor(item) {
         this.item = item;
-        console.log('hi');
     }
 }
 
-let items = document.querySelectorAll('.slider-slide');
-console.log(items)
-let slider = new Slider(items);
-
+function initializeSliders(){
+    let items = document.querySelectorAll('.slider-slide');
+    let slider = new Slider(items);
+}
 
 
 
