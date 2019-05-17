@@ -471,6 +471,7 @@ Responsive boxes & rows
 }
 * {
   box-sizing: border-box;
+  font-family: "Kodchasan";
 }
 h2 {
   font-size: 2.5rem;
