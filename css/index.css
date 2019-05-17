@@ -511,6 +511,7 @@ h3,
 h4,
 h5 {
   font-family: "Merriweather";
+  font-size: 24px;
 }
 h2 {
   font-size: 2.5rem;
@@ -547,6 +548,9 @@ h2 {
 }
 .overview-item img {
   width: 70%;
+}
+.overview-item p {
+  padding: 20px;
 }
 .button {
   padding: 14px 25px;
