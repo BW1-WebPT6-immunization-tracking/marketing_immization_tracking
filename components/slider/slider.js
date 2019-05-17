@@ -9,6 +9,7 @@ class Slider {
         this.activeSlide = 1;
         this.numOfSlides = this.items.length;
 
+        
         this.forwardArrow.addEventListener('click', () => {
             this.slide('forward');
         });
@@ -16,8 +17,8 @@ class Slider {
         this.previousArrow.addEventListener('click', () => {
             this.slide('previous');
         });
-
-        this.itemObjects = Array.from(this.items).map(item => new SliderItem(item));        
+        // don't need the object array atm but might later
+        this.itemObjects = Array.from(this.items).map(item => new SliderItem(item));  
     }
 
     getNextSlideNumber(direction) {
@@ -38,28 +39,46 @@ class Slider {
     }
 
     slide (direction) {
-        let nextSlide;
-        let oldSlide;
+        $(document).ready( () => {
+            let nextSlide;
+            let oldSlide;
 
-        if(direction === 'forward') {
-            nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
-            oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
+            if(direction === 'forward') {
+                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
+                oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
+                
+                // jQuery animation
+                let slideWidth = $(oldSlide).width();
+                console.log(slideWidth);
+                $(oldSlide).animate({
+                    right: - slideWidth
+                    // opacity: .5
+                    }, 800, function (){
+                        console.log('animate!');
+                        nextSlide.classList.remove('hide-slide'); 
+                        oldSlide.classList.add('hide-slide');                                                                                               
+                        // $(oldSlide).css('left', '');                                
+                });
+                
+                
+                
 
-            oldSlide.classList.add('hide-slide');
-            nextSlide.classList.remove('hide-slide');
+                // oldSlide.classList.add('hide-slide');
+                // nextSlide.classList.remove('hide-slide');
 
-            this.activeSlide = this.getNextSlideNumber(direction);
-        } else if (direction === 'previous') {
-            nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
-            oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
+                this.activeSlide = this.getNextSlideNumber(direction);
+            } else if (direction === 'previous') {
+                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
+                oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
 
-            oldSlide.classList.add('hide-slide');
-            nextSlide.classList.remove('hide-slide');
+                oldSlide.classList.add('hide-slide');
+                nextSlide.classList.remove('hide-slide');
 
-            this.activeSlide = this.getNextSlideNumber(direction);
-        } else {
-            console.log('Error: unrecognized slide direction!');
-        }
+                this.activeSlide = this.getNextSlideNumber(direction);
+            } else {
+                console.log('Error: unrecognized slide direction!');
+            }          
+        });  
     }
 }
 
