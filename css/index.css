@@ -443,6 +443,36 @@ Responsive boxes & rows
     display: none !important;
   }
 }
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tablet-only {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .tablet-only {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
 .hide-slide {
   display: none;
 }
@@ -487,10 +517,25 @@ h2 {
   text-decoration: underline;
   margin-bottom: 15px;
 }
+.page-section:nth-child(even) {
+  background-color: grey;
+}
+.page-section:last-child {
+  background-color: #32b932;
+}
 .call-to-action {
   text-align: center;
-  background-image: linear-gradient(red, orange);
-  height: 500px;
+  background-image: url("https://images.pexels.com/photos/1257110/pexels-photo-1257110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: top;
+  height: 650px;
+  border-bottom: 8px solid green;
+  color: white;
+}
+.call-to-action div {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(50, 185, 50, 0.7), rgba(120, 180, 120, 0.7));
 }
 .call-to-action h1 {
   padding-top: 265px;
@@ -504,18 +549,49 @@ h2 {
   width: 70%;
 }
 .button {
-  background-color: grey;
-  padding: 10px 25px;
+  padding: 14px 25px;
+  display: block;
+  border-radius: 25px;
+  border: 4px solid white;
+  background-color: transparent;
+  text-decoration: none;
+}
+@media screen and (min-width: 1000px) {
+  .button {
+    width: 175px;
+    margin: 10px auto;
+  }
 }
 .primary-button {
-  background-color: grey;
-  padding: 10px 25px;
-  background-color: blue;
-  color: white;
+  padding: 14px 25px;
+  display: block;
+  border-radius: 25px;
+  border: 4px solid white;
+  background-color: transparent;
+  text-decoration: none;
+  border-color: green;
+  color: green;
+}
+@media screen and (min-width: 1000px) {
+  .primary-button {
+    width: 175px;
+    margin: 10px auto;
+  }
 }
 .default-button {
-  background-color: grey;
-  padding: 10px 25px;
+  padding: 14px 25px;
+  display: block;
+  border-radius: 25px;
+  border: 4px solid white;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+}
+@media screen and (min-width: 1000px) {
+  .default-button {
+    width: 175px;
+    margin: 10px auto;
+  }
 }
 footer {
   text-align: center;
