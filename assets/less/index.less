@@ -56,15 +56,18 @@ h2 {
     height:650px;
     border-bottom:8px solid @main-color;
     color:@white-color;
+    overflow: hidden;
+    
     & > div {
-        width:100%;
         height:100%;
         background-image:linear-gradient(fadeOut(@secondary-color, 30%), fadeOut(@light-color, 30%));
+        padding:20px;
     }
-    h1 { 
-        padding-top:265px;
+    h1 {    
         font-size:3rem; 
         margin-bottom:30px;
+        @media @mobile { padding-top:30px; }
+        @media @tablet{ padding-top:265px; }
     }
     h3 {
         margin:25px;
@@ -90,18 +93,6 @@ h2 {
     }
 }
 
-.button {
-    padding: 14px 25px;
-    display:block;
-    border-radius:25px;
-    border:4px solid @white-color;
-    background-color:transparent;
-    text-decoration:none;
-    @media @desktop {
-        width:175px;
-        margin:10px auto;
-    }
-}
 
 .input-icon {
     margin-bottom:0;
@@ -122,10 +113,27 @@ input {
     border-radius:15px;
 }
 
+.button {
+    padding: 14px 25px;
+    display:block;
+    border-radius:25px;
+    border:4px solid @white-color;
+    background-color:transparent;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.3em;
+    background-color:fadeOut(@white-color, 40%);
+    @media @desktop {
+        width:175px;
+        margin:10px auto;
+    }
+}
+
 .primary-button {
     .button();
     border-color:@main-color;
     color:@main-color;
+    background-color:fadeOut(@light-color, 40%);
 }
 
 .default-button {
@@ -135,6 +143,20 @@ input {
 
 footer {
     text-align:center;
-    background-color:@black-color;
+    background-color:@dark-color;
     padding:25px 0;
+    @media @tablet {
+    ul {
+        display:flex;
+        justify-content:space-around;
+        width:100%;
+    }
+}
+    h4 {
+        color:@white-color;
+    }
+    a {
+        color:@light-color;
+        text-decoration:none;
+    }
 }

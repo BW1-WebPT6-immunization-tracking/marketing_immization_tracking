@@ -3,6 +3,7 @@
 
 <head>
     <title>VaxTrack: Track Immunizations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="components/responsiveness/responsiveness.js"></script>
     <script src="components/slider/slider.js"></script>
@@ -21,8 +22,12 @@
 
     <header>
         <nav>
-            <p class="mobile-only">Drop</p>
-            <ul>
+            <div class="mobile-only">
+                <a href="./index.html">VaxTrack</a> 
+                <span class="menu-icon fas fa-angle-up"></span>
+                <!-- Toggle fa-angle-down and fa-angle-up -->
+            </div>
+            <ul class="menu-hidden">
                 <li><a href="./login.html">Login</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./index.html">VaxTrack</a></li>
@@ -45,12 +50,12 @@
             <div class="container">
                 <h2>Track It</h2>
                 <div class="row">
-                    <div class="overview-item box-6 mobile-box-12">
+                    <div class="overview-item box-6 box-mobile-12">
                         <img src="https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <h3>Keep Your Child On Track</h3>
                         <p>As a parent, it's hard to keep track of your child's immunization records! Especially if you move states, or switch doctors. It's a pain to call around and figure out which immunizations your child still needs, or to have them mail you proof for things like school registration.</p>
                     </div>
-                    <div class="overview-item box-6 mobile-box-12">
+                    <div class="overview-item box-6 box-mobile-12">
                         <img src="https://images.pexels.com/photos/2007401/pexels-photo-2007401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <h3>Keep Your Own History Close</h3>
                         <p>As an adult, it's even harder to access these records for travel that requires immunizations or booster shots. This app allows medical professionals to upload immunization records to your personal or family account.</p>
@@ -69,11 +74,11 @@
 
                         <article class="slider-slide" data-number="1">
                             <div class="row">
-                                <div class="box-6 image">
+                                <div class="box-6 box-mobile-12 image">
                                     <img
                                         src="https://images.pexels.com/photos/38639/mockup-psd-ipad-iphone-38639.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                                 </div>
-                                <div class="box-6">
+                                <div class="box-6 box-mobile-12">
 
                                     <h4>1. Create An Account</h4>
                                     <p>In under 5 minutes, secure servers & strict privacy something in accordance with HIPPAA laws & regulations</p>
@@ -83,11 +88,11 @@
                         </article>
                         <article class="slider-slide hide-slide" data-number="2">
                             <div class="row">
-                                <div class="box-6 image">
+                                <div class="box-6 box-mobile-12 image">
                                     <img
                                         src="https://images.pexels.com/photos/1919236/pexels-photo-1919236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                                 </div>
-                                <div class="box-6">
+                                <div class="box-6 box-mobile-12">
 
                                     <h4>2. Contact Your Doctors</h4>
                                     <p>With three ways to submit infomation (fax, email, or their own VaxTrack account) it takes any doctor just minutes to connect
@@ -99,11 +104,11 @@
                         </article>
                         <article class="slider-slide hide-slide" data-number="3">
                             <div class="row">
-                                <div class="box-6 image">
+                                <div class="box-6 box-mobile-12 image">
                                     <img style="margin-top:-100px;"
                                         src="https://images.pexels.com/photos/1516648/pexels-photo-1516648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                                 </div>
-                                <div class="box-6">
+                                <div class="box-6 box-mobile-12">
 
                                     <h4>3. Confirm Your Information</h4>
                                     <p>Our automatic readers catch most things, but not everything. Confirm </p>
@@ -113,11 +118,11 @@
                         </article>
                         <article class="slider-slide hide-slide" data-number="4">
                             <div class="row">
-                                <div class="box-6 image">
+                                <div class="box-6 box-mobile-12 image">
                                     <img
                                         src="https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                                 </div>
-                                <div class="box-6">
+                                <div class="box-6 box-mobile-12">
 
                                     <h4>4. Access at Any Time</h4>
                                     <p>And this is the explanation</p>
@@ -138,10 +143,10 @@
                 <h2>Download</h2>
 
                 <div class="row">
-                    <div class="box-6">
+                    <div class="box-6 box-mobile-12">
                         <h3>Get Access to This Amazing Thing</h3>
                     </div>
-                    <div class="box-6">
+                    <div class="box-6 box-mobile-12">
                         <a href="#" class="primary-button">Download</a>
                         <a href="#" class="default-button">Login</a>
                         <a href="#" class="default-button">Github</a>
@@ -156,11 +161,11 @@
         <nav>
 
             <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">VaxTrack</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="#">Sign-Up</a></li>
+                <li><h4>VaxTrack</h4></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./sign-up.html">Sign-Up</a></li>
+                <li><a href="./download.html">Download</a></li>
             </ul>
         </nav>
     </footer>

@@ -150,31 +150,88 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-header nav ul {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  text-align: center;
+@media screen and (max-width: 700px) {
+  header nav {
+    text-align: right;
+  }
+  header nav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#bad8ba, #ececec);
+    font-size: 1.3em;
+    padding: 15px;
+  }
+  header nav > div a {
+    text-decoration: none;
+    color: #0a7d28;
+  }
+  header nav ul {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(236, 236, 236, 0.6);
+    padding: 15px 0;
+  }
+  header nav ul li {
+    padding: 5px;
+  }
+  header nav ul li a {
+    color: #052805;
+    font-weight: bold;
+  }
+  header nav ul li:nth-child(3) {
+    display: none;
+  }
+  .menu-icon {
+    border: 2px solid black;
+    font-size: 1.5em;
+    border-radius: 100%;
+    height: 28px;
+    width: 28px;
+    text-align: center;
+  }
+  .menu-hidden {
+    display: none;
+  }
 }
-header nav ul li {
-  width: 150px;
+@media screen and (min-width: 700px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  header nav ul li {
+    margin: 0 5px;
+  }
+  header nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 15px 15px 25px;
+    color: white;
+  }
+  header nav ul li:nth-child(3) {
+    width: auto;
+    margin: 0 25px;
+  }
+  header nav ul li:nth-child(3) a {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.8em;
+  }
 }
-header nav ul li a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 15px 25px;
-  color: white;
+@media screen and (min-width: 700px) and screen and (min-width: 700px) {
+  header nav ul li {
+    width: 100px;
+  }
 }
-header nav ul li:nth-child(3) {
-  width: auto;
-}
-header nav ul li:nth-child(3) a {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-size: 1.8em;
+@media screen and (min-width: 700px) and screen and (min-width: 1000px) {
+  header nav ul li {
+    width: 150px;
+  }
 }
 .container {
   padding: 10px;
@@ -488,8 +545,18 @@ Responsive boxes & rows
 }
 .slider-component .previous-arrow {
   position: absolute;
-  width: 876px;
   text-align: left;
+}
+@media screen and (min-width: 1000px) {
+  .slider-component .previous-arrow {
+    width: 876px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slider-component .previous-arrow {
+    width: 100%;
+    left: 0;
+  }
 }
 .slider-component .previous-arrow span {
   font-size: 32px;
@@ -505,13 +572,30 @@ Responsive boxes & rows
 .slider-component .previous-arrow span:hover {
   background-color: black;
 }
-.slider-component .previous-arrow span {
-  margin-left: -56px;
+@media screen and (min-width: 1000px) {
+  .slider-component .previous-arrow span {
+    margin-left: -56px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slider-component .previous-arrow span {
+    margin-left: 10px;
+  }
 }
 .slider-component .forward-arrow {
   position: absolute;
-  width: 876px;
   text-align: right;
+}
+@media screen and (min-width: 1000px) {
+  .slider-component .forward-arrow {
+    width: 876px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slider-component .forward-arrow {
+    width: 100%;
+    left: 0;
+  }
 }
 .slider-component .forward-arrow span {
   font-size: 32px;
@@ -527,8 +611,15 @@ Responsive boxes & rows
 .slider-component .forward-arrow span:hover {
   background-color: black;
 }
-.slider-component .forward-arrow span {
-  margin-right: -56px;
+@media screen and (min-width: 1000px) {
+  .slider-component .forward-arrow span {
+    margin-right: -56px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slider-component .forward-arrow span {
+    margin-right: 10px;
+  }
 }
 .slider-component img {
   width: 100%;
@@ -553,10 +644,10 @@ h2 {
   margin-bottom: 15px;
 }
 .page-section:nth-child(even) {
-  background-color: grey;
+  background-color: #ddd;
 }
 .page-section:last-child {
-  background-color: #32b932;
+  background-color: #5a9b5a;
 }
 .image {
   height: 250px;
@@ -578,18 +669,28 @@ h2 {
   background-size: cover;
   background-position: top;
   height: 650px;
-  border-bottom: 8px solid green;
-  color: white;
+  border-bottom: 8px solid #0a7d28;
+  color: #ececec;
+  overflow: hidden;
 }
 .call-to-action > div {
-  width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(50, 185, 50, 0.7), rgba(120, 180, 120, 0.7));
+  background-image: linear-gradient(rgba(90, 155, 90, 0.7), rgba(120, 180, 120, 0.7));
+  padding: 20px;
 }
 .call-to-action h1 {
-  padding-top: 265px;
   font-size: 3rem;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 700px) {
+  .call-to-action h1 {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .call-to-action h1 {
+    padding-top: 265px;
+  }
 }
 .call-to-action h3 {
   margin: 25px;
@@ -608,20 +709,6 @@ h2 {
 .overview-item p {
   padding: 20px;
 }
-.button {
-  padding: 14px 25px;
-  display: block;
-  border-radius: 25px;
-  border: 4px solid white;
-  background-color: transparent;
-  text-decoration: none;
-}
-@media screen and (min-width: 1000px) {
-  .button {
-    width: 175px;
-    margin: 10px auto;
-  }
-}
 .input-icon {
   margin-bottom: 0;
   display: inline-block;
@@ -639,15 +726,36 @@ input {
   max-width: 600px;
   border-radius: 15px;
 }
+.button {
+  padding: 14px 25px;
+  display: block;
+  border-radius: 25px;
+  border: 4px solid #ececec;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: rgba(236, 236, 236, 0.6);
+}
+@media screen and (min-width: 1000px) {
+  .button {
+    width: 175px;
+    margin: 10px auto;
+  }
+}
 .primary-button {
   padding: 14px 25px;
   display: block;
   border-radius: 25px;
-  border: 4px solid white;
+  border: 4px solid #ececec;
   background-color: transparent;
   text-decoration: none;
-  border-color: green;
-  color: green;
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: rgba(236, 236, 236, 0.6);
+  border-color: #0a7d28;
+  color: #0a7d28;
+  background-color: rgba(120, 180, 120, 0.6);
 }
 @media screen and (min-width: 1000px) {
   .primary-button {
@@ -659,10 +767,13 @@ input {
   padding: 14px 25px;
   display: block;
   border-radius: 25px;
-  border: 4px solid white;
+  border: 4px solid #ececec;
   background-color: transparent;
   text-decoration: none;
-  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: rgba(236, 236, 236, 0.6);
+  color: #ececec;
 }
 @media screen and (min-width: 1000px) {
   .default-button {
@@ -672,6 +783,20 @@ input {
 }
 footer {
   text-align: center;
-  background-color: black;
+  background-color: #052805;
   padding: 25px 0;
+}
+@media screen and (min-width: 700px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+footer h4 {
+  color: #ececec;
+}
+footer a {
+  color: #78b478;
+  text-decoration: none;
 }
