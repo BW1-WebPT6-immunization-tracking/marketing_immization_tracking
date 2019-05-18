@@ -38,7 +38,7 @@ h2 {
 }
 
 .nav-float{
-    position:absolute;
+    @media @tablet { position:absolute; }
     bottom:0;
     width:100%;
 }
@@ -77,10 +77,11 @@ h2 {
 
 
 .call-to-action.whole-page {
-    height:100vh;
+    min-height:100vh;
     border-bottom:0px solid black;
     h1 {
         padding-top:200px;
+        @media @mobile { padding-top:10px; }
     }
 }
 

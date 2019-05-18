@@ -3,6 +3,7 @@
 
 <head>
     <title>VaxTrack: Track Immunizations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="components/responsiveness/responsiveness.js"></script>
     <script src="components/slider/slider.js"></script>
@@ -18,19 +19,23 @@
 </head>
 
 <body onload="initialize()">
-
-    <header>
-        <nav>
-            <p class="mobile-only">Drop</p>
-            <ul>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./index.html">VaxTrack</a></li>
-                <li><a href="./download.html">Download</a></li>
-                <li><a href="./sign-up.html">Sign-Up</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+                <nav>
+                    <div class="mobile-only">
+                        <a href="./index.html">VaxTrack</a> 
+                        <span class="menu-icon fas fa-angle-up"></span>
+                        <!-- Toggle fa-angle-down and fa-angle-up -->
+                    </div>
+                    <ul class="menu-hidden">
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./index.html">VaxTrack</a></li>
+                        <li><a href="./download.html">Download</a></li>
+                        <li><a href="./sign-up.html">Sign-Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
 
     <header class="call-to-action">
         <div>

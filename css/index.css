@@ -654,9 +654,13 @@ h2 {
   overflow: hidden;
 }
 .nav-float {
-  position: absolute;
   bottom: 0;
   width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .nav-float {
+    position: absolute;
+  }
 }
 .nav-float-top {
   position: absolute;
@@ -697,11 +701,16 @@ h2 {
   font-size: 1.6rem;
 }
 .call-to-action.whole-page {
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: 0px solid black;
 }
 .call-to-action.whole-page h1 {
   padding-top: 200px;
+}
+@media screen and (max-width: 700px) {
+  .call-to-action.whole-page h1 {
+    padding-top: 10px;
+  }
 }
 .overview-item img {
   width: 70%;

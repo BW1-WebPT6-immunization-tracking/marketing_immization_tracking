@@ -3,6 +3,7 @@
 
 <head>
     <title>VaxTrack: Track Immunizations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="components/responsiveness/responsiveness.js"></script>
     <script src="components/slider/slider.js"></script>
@@ -18,31 +19,35 @@
 
 <body onload="initialize()">
 
-    <header class="nav-float-top">
-        <nav>
-            <p class="mobile-only">Drop</p>
-            <ul>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./index.html">VaxTrack</a></li>
-                <li><a href="./download.html">Download</a></li>
-                <li><a href="./sign-up.html">Sign-Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
+        <header>
+                <nav>
+                    <div class="mobile-only">
+                        <a href="./index.html">VaxTrack</a> 
+                        <span class="menu-icon fas fa-angle-up"></span>
+                        <!-- Toggle fa-angle-down and fa-angle-up -->
+                    </div>
+                    <ul class="menu-hidden">
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./index.html">VaxTrack</a></li>
+                        <li><a href="./download.html">Download</a></li>
+                        <li><a href="./sign-up.html">Sign-Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
     <header class="call-to-action whole-page">
         <div>
             <h1>Sign Up For An Account</h1>
             <div class="row">
-                <div class="box-6">
+                <div class="box-6 box-mobile-12">
                     <h3>Enter Your Email:</h3>
                     <h2 class="input-icon"><span class="fas fa-envelope"></span></h2>
                     <input type="text" placeholder="email" /><br />
                     
                     <a href="#" class="primary-button">Continue</a>
                 </div>
-                <div class='box-6'>
+                <div class='box-6 box-mobile-12'>
                     <h3>Or Log In Using:</h3>
                     <a href="#"><h2 class="input-icon"><span class="fab fa-facebook"></span></h2></a>
                     <a href="#"><h2 class="input-icon"><span class="fab fa-twitter"></span></h2></a>
