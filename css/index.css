@@ -581,7 +581,7 @@ h2 {
   border-bottom: 8px solid green;
   color: white;
 }
-.call-to-action div {
+.call-to-action > div {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(50, 185, 50, 0.7), rgba(120, 180, 120, 0.7));
@@ -589,6 +589,7 @@ h2 {
 .call-to-action h1 {
   padding-top: 265px;
   font-size: 3rem;
+  margin-bottom: 30px;
 }
 .call-to-action h3 {
   margin: 25px;
@@ -597,6 +598,9 @@ h2 {
 .call-to-action.whole-page {
   height: 100vh;
   border-bottom: 0px solid black;
+}
+.call-to-action.whole-page h1 {
+  padding-top: 200px;
 }
 .overview-item img {
   width: 70%;
@@ -617,6 +621,23 @@ h2 {
     width: 175px;
     margin: 10px auto;
   }
+}
+.input-icon {
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 1.8em;
+  color: white;
+}
+.input-icon .fab {
+  font-size: 1.8em;
+  margin: 0px 10px;
+}
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 15px;
 }
 .primary-button {
   padding: 14px 25px;
