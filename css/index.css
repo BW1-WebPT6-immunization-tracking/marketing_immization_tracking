@@ -545,18 +545,9 @@ Responsive boxes & rows
 }
 .slider-component .previous-arrow {
   position: absolute;
+  width: 100%;
+  left: 0;
   text-align: left;
-}
-@media screen and (min-width: 1000px) {
-  .slider-component .previous-arrow {
-    width: 876px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .slider-component .previous-arrow {
-    width: 100%;
-    left: 0;
-  }
 }
 .slider-component .previous-arrow span {
   font-size: 32px;
@@ -572,30 +563,14 @@ Responsive boxes & rows
 .slider-component .previous-arrow span:hover {
   background-color: black;
 }
-@media screen and (min-width: 1000px) {
-  .slider-component .previous-arrow span {
-    margin-left: -56px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .slider-component .previous-arrow span {
-    margin-left: 10px;
-  }
+.slider-component .previous-arrow span {
+  margin-left: 10px;
 }
 .slider-component .forward-arrow {
   position: absolute;
+  width: 100%;
+  left: 0;
   text-align: right;
-}
-@media screen and (min-width: 1000px) {
-  .slider-component .forward-arrow {
-    width: 876px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .slider-component .forward-arrow {
-    width: 100%;
-    left: 0;
-  }
 }
 .slider-component .forward-arrow span {
   font-size: 32px;
@@ -611,15 +586,8 @@ Responsive boxes & rows
 .slider-component .forward-arrow span:hover {
   background-color: black;
 }
-@media screen and (min-width: 1000px) {
-  .slider-component .forward-arrow span {
-    margin-right: -56px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .slider-component .forward-arrow span {
-    margin-right: 10px;
-  }
+.slider-component .forward-arrow span {
+  margin-right: 10px;
 }
 .slider-component img {
   width: 100%;

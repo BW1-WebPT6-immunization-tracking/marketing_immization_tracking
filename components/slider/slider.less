@@ -1,7 +1,6 @@
 .arrow(){
     position:absolute;
-    @media @desktop { width:876px; }
-    @media @mobile { width: 100%; left:0;}
+    width: 100%; left:0;
 
         span {
         font-size:32px;
@@ -38,9 +37,8 @@
     .previous-arrow {
         .arrow();
         text-align:left;
-        span {
-            @media @desktop { margin-left:-56px; } 
-            @media @mobile {margin-left:10px;}
+        span { 
+            margin-left:10px;
         }
     }    
 
@@ -48,9 +46,8 @@
         .arrow();
         text-align:right;
         span {
-            @media @desktop { margin-right:-56px; }
-            @media @mobile {margin-right:10px;}
-        }
+            margin-right:10px;
+            }
     } 
 
     img {width:100%;}
