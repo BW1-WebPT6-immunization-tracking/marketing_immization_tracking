@@ -1,5 +1,6 @@
 @import "mixins.less";
 @import "variables.less";
+@import "styles.less";
 
 @import "reset.less";
 
@@ -10,10 +11,13 @@
 @import "../../components/slider/slider.less";
 @import "../../components/tabs/tabs.less";
 
-* {
+body  {
     box-sizing: border-box; 
     font-family: "Kodchasan";
-}
+    }
+
+h1 { font-family:  "Kodchasan";}
+h2, h3, h4, h5 { font-family: "Merriweather"; font-size:24px;}
 
 h2 {
     font-size:2.5rem;
@@ -21,10 +25,42 @@ h2 {
     margin-bottom:15px;
 }
 
+.page-section:nth-child(even) { 
+    background-color:@grey-color;
+}
+.page-section:last-child {
+    background-color:@secondary-color;
+}
+
+.image {
+    height:250px;
+    overflow:hidden;
+}
+
+.nav-float{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.nav-float-top{
+    position:absolute;
+    top:0;
+    width:100%;
+}
 .call-to-action {
     text-align:center;
-    background-image:linear-gradient(red,orange);
-    height:500px;
+    background-image:url("https://images.pexels.com/photos/1257110/pexels-photo-1257110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size:cover;
+    background-position:top;
+    height:650px;
+    border-bottom:8px solid @main-color;
+    color:@white-color;
+    div {
+        width:100%;
+        height:100%;
+        background-image:linear-gradient(fadeOut(@secondary-color, 30%), fadeOut(@light-color, 30%));
+    }
     h1 { 
         padding-top:265px;
         font-size:3rem; 
@@ -35,27 +71,47 @@ h2 {
     }
 }
 
-.overview-item img {
-    width:70%;
+
+.call-to-action.whole-page {
+    height:100vh;
+    border-bottom:0px solid black;
+}
+
+.overview-item {
+    img {
+        width:70%;
+    }
+    p {
+        padding:20px;
+    }
 }
 
 .button {
-    background-color:grey;
-    padding: 10px 25px;
+    padding: 14px 25px;
+    display:block;
+    border-radius:25px;
+    border:4px solid @white-color;
+    background-color:transparent;
+    text-decoration:none;
+    @media @desktop {
+        width:175px;
+        margin:10px auto;
+    }
 }
 
 .primary-button {
     .button();
-    background-color:blue;
-    color:white;
+    border-color:@main-color;
+    color:@main-color;
 }
 
 .default-button {
     .button();
+    color:@white-color;
 }
 
 footer {
     text-align:center;
-    background-color:black;
-    padding:25px;
+    background-color:@black-color;
+    padding:25px 0;
 }

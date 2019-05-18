@@ -1,11 +1,21 @@
 .arrow(){
-    font-size:32px;
-    height:32px;
-    width:32px;
-    background-color:black;
-    color:white;
-    padding:8px;
+    position:absolute;
+    width:876px;
 
+        span {
+        font-size:32px;
+        height:32px;
+        width:32px;
+        background-color:fadeOut(@black-color, 70%);
+        color:white;
+        padding:8px;
+        border-radius:100%;
+        text-align:center;
+        cursor: pointer;
+        &:hover {
+            background-color:@black-color;
+        }
+    }
 }
 
 .hide-slide {
@@ -16,13 +26,27 @@
     display:flex;
     align-items:center;
 
+    &:hover {
+        .forward-arrow span {
+            background-color:fadeOut(@black-color, 50%);
+        }
+        .previous-arrow span {
+            background-color:fadeOut(@black-color, 50%);
+        }   
+    }
     .previous-arrow {
         .arrow();
+        text-align:left;
+        span {margin-left:-56px;}
     }    
 
     .forward-arrow {
         .arrow();
-    }    
+        text-align:right;
+        span {
+            margin-right:-56px;
+        }
+    } 
 
     img {width:100%;}
 
