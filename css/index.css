@@ -480,21 +480,55 @@ Responsive boxes & rows
   display: flex;
   align-items: center;
 }
+.slider-component:hover .forward-arrow span {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slider-component:hover .previous-arrow span {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .slider-component .previous-arrow {
+  position: absolute;
+  width: 876px;
+  text-align: left;
+}
+.slider-component .previous-arrow span {
   font-size: 32px;
   height: 32px;
   width: 32px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   padding: 8px;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.slider-component .previous-arrow span:hover {
+  background-color: black;
+}
+.slider-component .previous-arrow span {
+  margin-left: -56px;
 }
 .slider-component .forward-arrow {
+  position: absolute;
+  width: 876px;
+  text-align: right;
+}
+.slider-component .forward-arrow span {
   font-size: 32px;
   height: 32px;
   width: 32px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   padding: 8px;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.slider-component .forward-arrow span:hover {
+  background-color: black;
+}
+.slider-component .forward-arrow span {
+  margin-right: -56px;
 }
 .slider-component img {
   width: 100%;
@@ -523,6 +557,10 @@ h2 {
 }
 .page-section:last-child {
   background-color: #32b932;
+}
+.image {
+  height: 250px;
+  overflow: hidden;
 }
 .call-to-action {
   text-align: center;
