@@ -37,6 +37,17 @@ h2 {
     overflow:hidden;
 }
 
+.nav-float{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.nav-float-top{
+    position:absolute;
+    top:0;
+    width:100%;
+}
 .call-to-action {
     text-align:center;
     background-image:url("https://images.pexels.com/photos/1257110/pexels-photo-1257110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -61,6 +72,10 @@ h2 {
 }
 
 
+.call-to-action.whole-page {
+    height:100vh;
+    border-bottom:0px solid black;
+}
 
 .overview-item {
     img {
@@ -98,5 +113,5 @@ h2 {
 footer {
     text-align:center;
     background-color:@black-color;
-    padding:25px;
+    padding:25px 0;
 }
