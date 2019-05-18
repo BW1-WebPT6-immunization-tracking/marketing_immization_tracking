@@ -3,6 +3,7 @@
 
 <head>
     <title>VaxTrack: Track Immunizations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="components/responsiveness/responsiveness.js"></script>
     <script src="components/slider/slider.js"></script>
@@ -18,136 +19,46 @@
 </head>
 
 <body onload="initialize()">
-
-    <header>
-        <nav>
-            <p class="mobile-only">Drop</p>
-            <ul>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./index.html">VaxTrack</a></li>
-                <li><a href="./download.html">Download</a></li>
-                <li><a href="./sign-up.html">Sign-Up</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+                <nav>
+                    <div class="mobile-only">
+                        <a href="./index.html">VaxTrack</a> 
+                        <span class="menu-icon fas fa-angle-up"></span>
+                        <!-- Toggle fa-angle-down and fa-angle-up -->
+                    </div>
+                    <ul class="menu-hidden">
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./index.html">VaxTrack</a></li>
+                        <li><a href="./download.html">Download</a></li>
+                        <li><a href="./sign-up.html">Sign-Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
 
     <header class="call-to-action">
         <div>
-        <h1>Keeping them on the VaxTrack<br />to a Long & Healthy life</h1>
-        <h3>Keep track of their previous immunization records digitally</h3>
-        <a href="#" class="primary-button">Login</a>
-        <a href="#" class="default-button">Download</a>
+        <h1>Meet the team<br />behind this site</h1>
+        <h3>This is <strong>NOT</strong> a real product, no, this is just a tribute.</h3>
+        <a href="#" class="primary-button">GitHub</a>
         </div>
     </header>
     <section class="page-wrapper">
-        <section class="page-section" id="overview">
+        <section class="page-section" id="features">
             <div class="container">
-                <h2>Track It</h2>
-                <div class="row">
-                    <div class="overview-item box-6 mobile-box-12">
-                        <img src="https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        <h3>Keep Your Child On Track</h3>
-                        <p>As a parent, it's hard to keep track of your child's immunization records! Especially if you move states, or switch doctors. It's a pain to call around and figure out which immunizations your child still needs, or to have them mail you proof for things like school registration.</p>
-                    </div>
-                    <div class="overview-item box-6 mobile-box-12">
-                        <img src="https://images.pexels.com/photos/2007401/pexels-photo-2007401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        <h3>Keep Your Own History Close</h3>
-                        <p>As an adult, it's even harder to access these records for travel that requires immunizations or booster shots. This app allows medical professionals to upload immunization records to your personal or family account.</p>
-                    </div>
-                </div>
+                <h2>This is actually a multi-page landing site</h2>
+                <h4>Written in LESS, Javascript, and HTML with animations done with JQuery</h4>
             </div>
         </section>
         <section class="page-section" id="features">
-            <div class="container">
-                <h2>Features</h2>
-                <div class="slider-component">
-
-                    <div class="previous-arrow"> <span class="fas fa-angle-left"></span> </div>
-
-                    <div class="slider-viewport">
-
-                        <article class="slider-slide" data-number="1">
-                            <div class="row">
-                                <div class="box-6 image">
-                                    <img
-                                        src="https://images.pexels.com/photos/38639/mockup-psd-ipad-iphone-38639.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                                </div>
-                                <div class="box-6">
-
-                                    <h4>1. Create An Account</h4>
-                                    <p>In under 5 minutes, secure servers & strict privacy something in accordance with HIPPAA laws & regulations</p>
-
-                                </div>
-                            </div>
-                        </article>
-                        <article class="slider-slide hide-slide" data-number="2">
-                            <div class="row">
-                                <div class="box-6 image">
-                                    <img
-                                        src="https://images.pexels.com/photos/1919236/pexels-photo-1919236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                                </div>
-                                <div class="box-6">
-
-                                    <h4>2. Contact Your Doctors</h4>
-                                    <p>With three ways to submit infomation (fax, email, or their own VaxTrack account) it takes any doctor just minutes to connect
-                                        your information with your account
-                                    </p>
-
-                                </div>
-                            </div>
-                        </article>
-                        <article class="slider-slide hide-slide" data-number="3">
-                            <div class="row">
-                                <div class="box-6 image">
-                                    <img style="margin-top:-100px;"
-                                        src="https://images.pexels.com/photos/1516648/pexels-photo-1516648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                                </div>
-                                <div class="box-6">
-
-                                    <h4>3. Confirm Your Information</h4>
-                                    <p>Our automatic readers catch most things, but not everything. Confirm </p>
-
-                                </div>
-                            </div>
-                        </article>
-                        <article class="slider-slide hide-slide" data-number="4">
-                            <div class="row">
-                                <div class="box-6 image">
-                                    <img
-                                        src="https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                                </div>
-                                <div class="box-6">
-
-                                    <h4>4. Access at Any Time</h4>
-                                    <p>And this is the explanation</p>
-
-                                </div>
-                            </div>
-                        </article>
-
-                    </div>
-
-                    <div class="forward-arrow"> <span class="fas fa-angle-right"></span> </div>
-
-                </div>
-            </div>
+                <div class="container">
+            <h3>Jordan Hubbard</h3>
+        </div>
         </section>
         <section class="page-section" id="download">
-            <div class="container">
-                <h2>Download</h2>
-
-                <div class="row">
-                    <div class="box-6">
-                        <h3>Get Access to This Amazing Thing</h3>
-                    </div>
-                    <div class="box-6">
-                        <a href="#" class="primary-button">Download</a>
-                        <a href="#" class="default-button">Login</a>
-                        <a href="#" class="default-button">Github</a>
-                    </div>
-                </div>
-                
+                <div class="container">
+            <h3>Travis Little</h3>
             </div>
         </section>
     </section>
@@ -156,11 +67,11 @@
         <nav>
 
             <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">VaxTrack</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="#">Sign-Up</a></li>
+                    <li><h4>VaxTrack</h4></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./sign-up.html">Sign-Up</a></li>
+                    <li><a href="./download.html">Download</a></li>
             </ul>
         </nav>
     </footer>
