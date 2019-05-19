@@ -532,6 +532,9 @@ Responsive boxes & rows
 }
 .hide-slide {
   display: none;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
 }
 .slider-component {
   display: flex;
@@ -544,9 +547,9 @@ Responsive boxes & rows
   background-color: rgba(0, 0, 0, 0.5);
 }
 .slider-component .previous-arrow {
-  position: absolute;
+  /*position: absolute;  // commented out because the absolute position and 100% width caused arrow divs to overlap
   width: 100%;
-  left: 0;
+  left: 0;*/
   text-align: left;
 }
 .slider-component .previous-arrow span {
@@ -567,9 +570,9 @@ Responsive boxes & rows
   margin-left: 10px;
 }
 .slider-component .forward-arrow {
-  position: absolute;
-  width: 100%;
-  left: 0;
+  /*position: absolute;   //commented out because the absolute position and 100% width caused arrow divs to overlap
+  /*width: 100%;*/
+  /*left: 0;*/
   text-align: right;
 }
 .slider-component .forward-arrow span {
@@ -591,6 +594,9 @@ Responsive boxes & rows
 }
 .slider-component img {
   width: 100%;
+}
+.slider-slide {
+  position: relative;   /* added to make slider animation work */
 }
 body {
   box-sizing: border-box;

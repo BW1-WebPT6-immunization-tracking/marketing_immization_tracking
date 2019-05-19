@@ -9,12 +9,19 @@ class Slider {
         this.activeSlide = 1;
         this.numOfSlides = this.items.length;
 
-        
-        this.forwardArrow.addEventListener('click', () => {
+
+        // this.sliderElement.addEventListener('click', (event) => {
+        //     console.log(event.currentTarget);
+        //     console.log(event.target);
+        // });
+
+        this.forwardArrow.addEventListener('click', (event) => {
+            // console.log('forward', event.currentTarget.parent)
             this.slide('forward');
         });
 
-        this.previousArrow.addEventListener('click', () => {
+        this.previousArrow.addEventListener('click', (event) => {
+            // console.log('prev', event.currentTarget)
             this.slide('previous');
         });
         // don't need the object array atm but might later
@@ -42,38 +49,46 @@ class Slider {
         $(document).ready( () => {
             let nextSlide;
             let oldSlide;
-
+            let slideWidth;
+            
             if(direction === 'forward') {
+                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
+                oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
+                console.log('next slide', nextSlide)
+                // jQuery animation
+                slideWidth = $(oldSlide).width();
+                $(oldSlide).animate({
+                    right: - slideWidth,
+                    opacity: .5
+                    }, 600, function (){
+                        console.log('animate!');
+                        nextSlide.classList.remove('hide-slide');
+                        oldSlide.classList.add('hide-slide'); 
+                        $(oldSlide).css('right', '');
+                        $(oldSlide).css('opacity', '1');                                                                                                                                                                 
+                }); 
+
+                
+                this.activeSlide = this.getNextSlideNumber(direction);
+
+            } else if (direction === 'previous') {
                 nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
                 oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
                 
                 // jQuery animation
-                let slideWidth = $(oldSlide).width();
-                console.log(slideWidth);
+                slideWidth = $(oldSlide).width();
                 $(oldSlide).animate({
-                    right: - slideWidth
-                    // opacity: .5
-                    }, 800, function (){
+                    right: + slideWidth,
+                    opacity: .5
+                    }, 600, function (){
                         console.log('animate!');
-                        nextSlide.classList.remove('hide-slide'); 
-                        oldSlide.classList.add('hide-slide');                                                                                               
-                        // $(oldSlide).css('left', '');                                
+                        nextSlide.classList.remove('hide-slide');
+                        oldSlide.classList.add('hide-slide'); 
+                        $(oldSlide).css('opacity', '1');
+                        $(oldSlide).css('right', '');                                                                                                                                                                  
                 });
+
                 
-                
-                
-
-                // oldSlide.classList.add('hide-slide');
-                // nextSlide.classList.remove('hide-slide');
-
-                this.activeSlide = this.getNextSlideNumber(direction);
-            } else if (direction === 'previous') {
-                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
-                oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
-
-                oldSlide.classList.add('hide-slide');
-                nextSlide.classList.remove('hide-slide');
-
                 this.activeSlide = this.getNextSlideNumber(direction);
             } else {
                 console.log('Error: unrecognized slide direction!');
