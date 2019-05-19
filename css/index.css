@@ -592,7 +592,7 @@ Responsive boxes & rows
 }
 .slider-component .forward-arrow span {
   margin-right: 10px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .slider-component img {
   width: 100%;
