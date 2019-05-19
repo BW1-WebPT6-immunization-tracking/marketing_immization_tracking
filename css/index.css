@@ -547,9 +547,9 @@ Responsive boxes & rows
   background-color: rgba(0, 0, 0, 0.5);
 }
 .slider-component .previous-arrow {
-  /*position: absolute;  // commented out because the absolute position and 100% width caused arrow divs to overlap
-  width: 100%;
-  left: 0;*/
+  position: absolute;  
+  /*width: 100%;*/
+  left: 0;
   text-align: left;
 }
 .slider-component .previous-arrow span {
@@ -571,9 +571,9 @@ Responsive boxes & rows
   margin-right: 10px;
 }
 .slider-component .forward-arrow {
-  /*position: absolute;   //commented out because the absolute position and 100% width caused arrow divs to overlap
+  position: absolute;
   /*width: 100%;*/
-  /*left: 0;*/
+  right: 0;
   text-align: right;
 }
 .slider-component .forward-arrow span {

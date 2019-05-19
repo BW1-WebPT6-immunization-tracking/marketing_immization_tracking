@@ -52,14 +52,13 @@ class Slider {
             if(direction === 'forward') {
                 nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
                 oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
-                console.log('next slide', nextSlide)
+
                 // jQuery animation
                 slideWidth = $(oldSlide).width();
                 $(oldSlide).animate({
                     right: - slideWidth,
                     opacity: .5
                     }, 600, function (){
-                        console.log('animate!');
                         nextSlide.classList.remove('hide-slide');
                         oldSlide.classList.add('hide-slide'); 
                         $(oldSlide).css('right', '');
@@ -78,7 +77,6 @@ class Slider {
                     right: + slideWidth,
                     opacity: .5
                     }, 600, function (){
-                        console.log('animate!');
                         nextSlide.classList.remove('hide-slide');
                         oldSlide.classList.add('hide-slide'); 
                         $(oldSlide).css('opacity', '1');
