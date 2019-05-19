@@ -568,6 +568,7 @@ Responsive boxes & rows
 }
 .slider-component .previous-arrow span {
   margin-left: 10px;
+  margin-right: 10px;
 }
 .slider-component .forward-arrow {
   /*position: absolute;   //commented out because the absolute position and 100% width caused arrow divs to overlap
@@ -590,6 +591,7 @@ Responsive boxes & rows
   background-color: black;
 }
 .slider-component .forward-arrow span {
+  margin-right: 10px;
   margin-right: 10px;
 }
 .slider-component img {
