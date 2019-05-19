@@ -1,4 +1,10 @@
-/* Left to right slider component */
+/* Sliding carosel component
+TO-DO:
+-Refactor/polish - lots of repeated code can go into functions
+-Add options for animation such as enable/disable opacity, animation speed, and direction
+
+
+ */
 
 class Slider {
     constructor(sliderElement) {        
@@ -9,19 +15,11 @@ class Slider {
         this.activeSlide = 1;
         this.numOfSlides = this.items.length;
 
-
-        // this.sliderElement.addEventListener('click', (event) => {
-        //     console.log(event.currentTarget);
-        //     console.log(event.target);
-        // });
-
         this.forwardArrow.addEventListener('click', (event) => {
-            // console.log('forward', event.currentTarget.parent)
             this.slide('forward');
         });
 
         this.previousArrow.addEventListener('click', (event) => {
-            // console.log('prev', event.currentTarget)
             this.slide('previous');
         });
         // don't need the object array atm but might later
@@ -66,8 +64,7 @@ class Slider {
                         oldSlide.classList.add('hide-slide'); 
                         $(oldSlide).css('right', '');
                         $(oldSlide).css('opacity', '1');                                                                                                                                                                 
-                }); 
-
+                });
                 
                 this.activeSlide = this.getNextSlideNumber(direction);
 
@@ -87,11 +84,10 @@ class Slider {
                         $(oldSlide).css('opacity', '1');
                         $(oldSlide).css('right', '');                                                                                                                                                                  
                 });
-
                 
                 this.activeSlide = this.getNextSlideNumber(direction);
             } else {
-                console.log('Error: unrecognized slide direction!');
+                console.log('Error: unrecognized slide direction. Use forward or previous.');
             }          
         });  
     }
