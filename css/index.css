@@ -532,9 +532,6 @@ Responsive boxes & rows
 }
 .hide-slide {
   display: none;
-  left: 0px;
-  right: 0px;
-  opacity: 1;
 }
 .slider-component {
   display: flex;
@@ -568,7 +565,6 @@ Responsive boxes & rows
 }
 .slider-component .previous-arrow span {
   margin-left: 10px;
-  margin-right: 10px;
 }
 .slider-component .forward-arrow {
   position: absolute;
@@ -592,7 +588,6 @@ Responsive boxes & rows
 }
 .slider-component .forward-arrow span {
   margin-right: 10px;
-  margin-left: 10px;
 }
 .slider-component img {
   width: 100%;
