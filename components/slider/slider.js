@@ -1,4 +1,8 @@
-/* Left to right slider component */
+/* Sliding carosel component
+TO-DO:
+-Add options for animation such as enable/disable opacity, animation speed, and direction
+
+ */
 
 class Slider {
     constructor(sliderElement) {        
@@ -9,75 +13,83 @@ class Slider {
         this.activeSlide = 1;
         this.numOfSlides = this.items.length;
 
-        
-        this.forwardArrow.addEventListener('click', () => {
-            this.slide('forward');
+        this.forwardArrow.addEventListener('click', (event) => {
+            this.slide('forward', this.activeSlide, this.numOfSlides);
         });
 
-        this.previousArrow.addEventListener('click', () => {
-            this.slide('previous');
+        this.previousArrow.addEventListener('click', (event) => {
+            this.slide('previous', this.activeSlide, this.numOfSlides);
         });
         // don't need the object array atm but might later
         this.itemObjects = Array.from(this.items).map(item => new SliderItem(item));  
-    }
+    }   
 
-    getNextSlideNumber(direction) {
-        if (direction === 'forward') {
-            if (this.activeSlide == this.numOfSlides) { // If at the last slide, go to the first slide
-                return 1; 
-            } else {    // If not at the last slide, go to the next slide like normal
-                return this.activeSlide + 1;
-            }
-        } 
-        if (direction === 'previous') {
-            if (this.activeSlide == 1) {    // If at the first slide, go to the last slide
-                return this.numOfSlides;
-            } else {                        // If not at the first slide, go to the previous slide like normal
-                return this.activeSlide -1;
-            }
-        } 
-    }
-
-    slide (direction) {
+    slide (direction, activeSlide, numOfSlides) {
         $(document).ready( () => {
             let nextSlide;
             let oldSlide;
+            let slideWidth;
 
             if(direction === 'forward') {
-                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
+                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${getNextSlideNumber(direction)}"]`)
                 oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
-                
-                // jQuery animation
-                let slideWidth = $(oldSlide).width();
-                console.log(slideWidth);
-                $(oldSlide).animate({
-                    right: - slideWidth
-                    // opacity: .5
-                    }, 800, function (){
-                        console.log('animate!');
-                        nextSlide.classList.remove('hide-slide'); 
-                        oldSlide.classList.add('hide-slide');                                                                                               
-                        // $(oldSlide).css('left', '');                                
-                });
-                
-                
-                
+                this.activeSlide = slideForward();                
 
-                // oldSlide.classList.add('hide-slide');
-                // nextSlide.classList.remove('hide-slide');
-
-                this.activeSlide = this.getNextSlideNumber(direction);
             } else if (direction === 'previous') {
-                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.getNextSlideNumber(direction)}"]`)
+                nextSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${getNextSlideNumber(direction)}"]`)
                 oldSlide = this.sliderElement.querySelector(`.slider-slide[data-number="${this.activeSlide}"]`);
-
-                oldSlide.classList.add('hide-slide');
-                nextSlide.classList.remove('hide-slide');
-
-                this.activeSlide = this.getNextSlideNumber(direction);
+                this.activeSlide = slidePrevious();
+                
             } else {
-                console.log('Error: unrecognized slide direction!');
-            }          
+                console.log('Error: unrecognized slide direction. Use forward or previous.');
+            }
+
+            function slideForward () {
+                // jQuery animation
+                slideWidth = $(oldSlide).width();
+                $(oldSlide).animate({
+                    right: - slideWidth,
+                    opacity: .5
+                    }, 600, function() {
+                        nextSlide.classList.remove('hide-slide');
+                        oldSlide.classList.add('hide-slide'); 
+                        $(oldSlide).css('right', '');
+                        $(oldSlide).css('opacity', '1');
+                    });              
+                return getNextSlideNumber(direction);
+            }
+
+            function slidePrevious () {
+                // jQuery animation
+                slideWidth = $(oldSlide).width();
+                $(oldSlide).animate({
+                    right: + slideWidth,
+                    opacity: .5
+                    }, 600, function() {
+                        nextSlide.classList.remove('hide-slide');
+                        oldSlide.classList.add('hide-slide'); 
+                        $(oldSlide).css('right', '');
+                        $(oldSlide).css('opacity', '1');
+                    });
+                return getNextSlideNumber(direction);
+            }
+
+            function getNextSlideNumber(direction) {
+                if (direction === 'forward') {
+                    if (activeSlide == numOfSlides) { // If at the last slide, go to the first slide
+                        return 1; 
+                    } else {    // If not at the last slide, go to the next slide like normal
+                        return activeSlide + 1;
+                    }
+                } 
+                if (direction === 'previous') {
+                    if (activeSlide == 1) {    // If at the first slide, go to the last slide
+                        return numOfSlides;
+                    } else {                        // If not at the first slide, go to the previous slide like normal
+                        return activeSlide -1;
+                    }
+                } 
+            }                
         });  
     }
 }
