@@ -785,3 +785,10 @@ footer a {
   color: #78b478;
   text-decoration: none;
 }
+#about-the-programmers img {
+  width: 80%;
+  margin: auto;
+}
+#about-the-programmers h3 {
+  margin: 12px 0;
+}
