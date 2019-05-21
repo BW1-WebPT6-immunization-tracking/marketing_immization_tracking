@@ -544,10 +544,9 @@ Responsive boxes & rows
   background-color: rgba(0, 0, 0, 0.5);
 }
 .slider-component .previous-arrow {
-  position: absolute;  
-  /*width: 100%;*/
-  left: 0;
+  position: absolute;
   text-align: left;
+  left: 0;
 }
 .slider-component .previous-arrow span {
   font-size: 32px;
@@ -568,9 +567,8 @@ Responsive boxes & rows
 }
 .slider-component .forward-arrow {
   position: absolute;
-  /*width: 100%;*/
-  right: 0;
   text-align: right;
+  right: 0;
 }
 .slider-component .forward-arrow span {
   font-size: 32px;
@@ -591,9 +589,6 @@ Responsive boxes & rows
 }
 .slider-component img {
   width: 100%;
-}
-.slider-slide {
-  position: relative;   /* added to make slider animation work */
 }
 body {
   box-sizing: border-box;
