@@ -792,3 +792,6 @@ footer a {
 #about-the-programmers h3 {
   margin: 12px 0;
 }
+#about-the-programmers p {
+  line-height: 125%;
+}
