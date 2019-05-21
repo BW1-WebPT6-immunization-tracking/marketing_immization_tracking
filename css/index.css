@@ -533,6 +533,9 @@ Responsive boxes & rows
 .hide-slide {
   display: none;
 }
+.slider-slide {
+  position: relative;
+}
 .slider-component {
   display: flex;
   align-items: center;
