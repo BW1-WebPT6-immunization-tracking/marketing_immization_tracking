@@ -14,51 +14,68 @@
 
     <link rel="stylesheet" href="css/index.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css"
+        integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css"
+        integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
 </head>
 
 <body onload="initialize()">
-        <header>
-                <nav class="menu-dropdown">
-                    <div class="mobile-only">
-                        <a href="./index.html">VaxTrack</a> 
-                        <span class="menu-icon fas fa-angle-up"></span>
-                        <!-- Toggle fa-angle-down and fa-angle-up -->
-                    </div>
-                    <ul class="menu-hidden">
-                        <li><a href="./login.html">Login</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./index.html">VaxTrack</a></li>
-                        <li><a href="./download.html">Download</a></li>
-                        <li><a href="./sign-up.html">Sign-Up</a></li>
-                    </ul>
-                </nav>
-            </header>
-        
+    <header>
+        <nav class="menu-dropdown">
+            <div class="mobile-only">
+                <a href="./index.html">VaxTrack</a>
+                <span class="menu-icon fas fa-angle-up"></span>
+                <!-- Toggle fa-angle-down and fa-angle-up -->
+            </div>
+            <ul class="menu-hidden">
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./index.html">VaxTrack</a></li>
+                <li><a href="./download.html">Download</a></li>
+                <li><a href="./sign-up.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <header class="call-to-action">
         <div>
-        <h1>Meet the team<br />behind this site</h1>
-        <h3>This is <strong>NOT</strong> a real product, no, this is just a tribute.</h3>
-        <a href="https://github.com/BW1-WebPT6-immunization-tracking/marketing_immization_tracking" target="_blank" class="primary-button">GitHub</a>
+            <h1>Meet the team<br />behind this site</h1>
+            <h3>This is <strong>NOT</strong> a real product, no, this is just a tribute.</h3>
+            <a href="https://github.com/BW1-WebPT6-immunization-tracking/marketing_immization_tracking" target="_blank"
+                class="primary-button">GitHub</a>
         </div>
     </header>
-    <section class="page-wrapper">
+    <section class="page-wrapper" id="about-the-programmers">
         <section class="page-section" id="features">
             <div class="container">
                 <h2>This is actually a multi-page landing site</h2>
                 <h4>Written in LESS, Javascript, and HTML with animations done with JQuery</h4>
+                <br />
+                <h2><br />Meet the Coders:</h2>
             </div>
         </section>
         <section class="page-section" id="features">
-                <div class="container">
-            <h3>Jordan Hubbard</h3>
-        </div>
+            <div class="row">
+                <div class="box-mobile-12 box-tablet-3">
+                    <img src="assets/img/portfolio-picture-jordan.png" />
+                </div>
+                <div class="box-mobile-12 box-tablet-9">
+                    <h3>Jordan Hubbard</h3>
+                    <p>I have always been fascinated by computers, and learned programming in high school to help with math class. I went to school at The Ohio State University for 3 years, and got a strong base in Computer Science and Engineering, but dropped out to due to financial reasons and started Freelancing Web Development. Since then, I've been building websites in my free time, and joined Lamda to solidify my expertise and get a job.</p>
+                </div>
+            </div>
         </section>
         <section class="page-section" id="download">
-                <div class="container">
-            <h3>Travis Little</h3>
+            <div class="row">
+                <div class="box-mobile-12 box-tablet-3">
+                    <img src="assets/img/portfolio-picture-travis.png" />
+                </div>
+                <div class="box-mobile-12 box-tablet-9">
+                    <h3>Travis Little</h3>
+                    <p>Born and raised in Denver, Colorado, I love to be outside in the sun, either hiking, playing disc golf, or taking the dog out for a long walk. I've always been curious how things work, so when I first played Mario on Nintendo as a young boy, making moving pictures on my screen seemingly with magic, I was enthralled. The same fascination continued when the internet came along with websites. Before long, as a young teen, while the internet was in it's infancy, I taught myself how to make websites for fun. Small games and applications followed. This fascination has always been a hobby to me, but through Lambda school, it will soon be a career I love.</p>
+                </div>
             </div>
         </section>
     </section>
@@ -67,18 +84,20 @@
         <nav>
 
             <ul>
-                    <li><h4>VaxTrack</h4></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                    <li><a href="./sign-up.html">Sign-Up</a></li>
-                    <li><a href="./download.html">Download</a></li>
+                <li>
+                    <h4>VaxTrack</h4>
+                </li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./sign-up.html">Sign-Up</a></li>
+                <li><a href="./download.html">Download</a></li>
             </ul>
         </nav>
     </footer>
 
 
     <link href="https://fonts.googleapis.com/css?family=Alice|Merriweather|Kodchasan" rel="stylesheet">
-    
+
 </body>
 
 </html>
