@@ -1,6 +1,5 @@
 .arrow(){
     position:absolute;
-    width: 100%; left:0;
 
         span {
         font-size:32px;
@@ -22,6 +21,10 @@
     display:none;
 }
 
+.slider-slide {
+    position:relative;
+}
+
 .slider-component {
     display:flex;
     align-items:center;
@@ -37,6 +40,7 @@
     .previous-arrow {
         .arrow();
         text-align:left;
+        left:0;
         span { 
             margin-left:10px;
         }
@@ -45,6 +49,7 @@
     .forward-arrow {
         .arrow();
         text-align:right;
+        right:0;
         span {
             margin-right:10px;
             }

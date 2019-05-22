@@ -158,7 +158,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(#bad8ba, #ececec);
+    background-image: linear-gradient(#bad8ba, #eee);
     font-size: 1.3em;
     padding: 15px;
   }
@@ -170,7 +170,7 @@ table {
     position: absolute;
     text-align: center;
     width: 100%;
-    background-color: rgba(236, 236, 236, 0.6);
+    background-color: rgba(238, 238, 238, 0.6);
     padding: 15px 0;
   }
   header nav ul li {
@@ -210,7 +210,14 @@ table {
     display: block;
     width: 100%;
     padding: 15px 15px 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     color: white;
+  }
+  header nav ul li a:hover {
+    text-decoration: none;
+    background-image: linear-gradient(transparent, #eee);
+    color: #052805;
   }
   header nav ul li:nth-child(3) {
     width: auto;
@@ -533,27 +540,29 @@ Responsive boxes & rows
 .hide-slide {
   display: none;
 }
+.slider-slide {
+  position: relative;
+}
 .slider-component {
   display: flex;
   align-items: center;
 }
 .slider-component:hover .forward-arrow span {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(51, 51, 51, 0.5);
 }
 .slider-component:hover .previous-arrow span {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(51, 51, 51, 0.5);
 }
 .slider-component .previous-arrow {
-  position: absolute;  
-  /*width: 100%;*/
-  left: 0;
+  position: absolute;
   text-align: left;
+  left: 0;
 }
 .slider-component .previous-arrow span {
   font-size: 32px;
   height: 32px;
   width: 32px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(51, 51, 51, 0.3);
   color: white;
   padding: 8px;
   border-radius: 100%;
@@ -561,22 +570,21 @@ Responsive boxes & rows
   cursor: pointer;
 }
 .slider-component .previous-arrow span:hover {
-  background-color: black;
+  background-color: #333;
 }
 .slider-component .previous-arrow span {
   margin-left: 10px;
 }
 .slider-component .forward-arrow {
   position: absolute;
-  /*width: 100%;*/
-  right: 0;
   text-align: right;
+  right: 0;
 }
 .slider-component .forward-arrow span {
   font-size: 32px;
   height: 32px;
   width: 32px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(51, 51, 51, 0.3);
   color: white;
   padding: 8px;
   border-radius: 100%;
@@ -584,7 +592,7 @@ Responsive boxes & rows
   cursor: pointer;
 }
 .slider-component .forward-arrow span:hover {
-  background-color: black;
+  background-color: #333;
 }
 .slider-component .forward-arrow span {
   margin-right: 10px;
@@ -592,12 +600,10 @@ Responsive boxes & rows
 .slider-component img {
   width: 100%;
 }
-.slider-slide {
-  position: relative;   /* added to make slider animation work */
-}
 body {
   box-sizing: border-box;
   font-family: "Kodchasan";
+  color: #333;
 }
 h1 {
   font-family: "Kodchasan";
@@ -613,6 +619,9 @@ h2 {
   font-size: 2.5rem;
   text-decoration: underline;
   margin-bottom: 15px;
+}
+.page-section {
+  background-color: #eee;
 }
 .page-section:nth-child(even) {
   background-color: #ddd;
@@ -645,7 +654,7 @@ h2 {
   background-position: top;
   height: 650px;
   border-bottom: 8px solid #0a7d28;
-  color: #ececec;
+  color: #eee;
   overflow: hidden;
 }
 .call-to-action > div {
@@ -692,11 +701,11 @@ h2 {
 .input-icon {
   margin-bottom: 0;
   display: inline-block;
-  font-size: 1.8em;
+  font-size: 1.2em;
   color: white;
 }
 .input-icon .fab {
-  font-size: 1.8em;
+  font-size: 2.8em;
   margin: 0px 10px;
 }
 input {
@@ -708,14 +717,15 @@ input {
 }
 .button {
   padding: 14px 25px;
+  margin: 12px 0 16px;
   display: block;
   border-radius: 25px;
-  border: 4px solid #ececec;
+  border: 4px solid #eee;
   background-color: transparent;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3em;
-  background-color: rgba(236, 236, 236, 0.6);
+  background-color: rgba(238, 238, 238, 0.6);
 }
 @media screen and (min-width: 1000px) {
   .button {
@@ -725,14 +735,15 @@ input {
 }
 .primary-button {
   padding: 14px 25px;
+  margin: 12px 0 16px;
   display: block;
   border-radius: 25px;
-  border: 4px solid #ececec;
+  border: 4px solid #eee;
   background-color: transparent;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3em;
-  background-color: rgba(236, 236, 236, 0.6);
+  background-color: rgba(238, 238, 238, 0.6);
   border-color: #0a7d28;
   color: #0a7d28;
   background-color: rgba(120, 180, 120, 0.6);
@@ -743,23 +754,32 @@ input {
     margin: 10px auto;
   }
 }
+.primary-button:hover {
+  color: #eee;
+  background-color: transparent;
+}
 .default-button {
   padding: 14px 25px;
+  margin: 12px 0 16px;
   display: block;
   border-radius: 25px;
-  border: 4px solid #ececec;
+  border: 4px solid #eee;
   background-color: transparent;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3em;
-  background-color: rgba(236, 236, 236, 0.6);
-  color: #ececec;
+  background-color: rgba(238, 238, 238, 0.6);
+  color: #eee;
 }
 @media screen and (min-width: 1000px) {
   .default-button {
     width: 175px;
     margin: 10px auto;
   }
+}
+.default-button:hover {
+  color: #333;
+  background-color: transparent;
 }
 footer {
   text-align: center;
@@ -774,9 +794,19 @@ footer {
   }
 }
 footer h4 {
-  color: #ececec;
+  color: #eee;
 }
 footer a {
   color: #78b478;
   text-decoration: none;
+}
+#about-the-programmers img {
+  width: 80%;
+  margin: auto;
+}
+#about-the-programmers h3 {
+  margin: 12px 0;
+}
+#about-the-programmers p {
+  line-height: 125%;
 }

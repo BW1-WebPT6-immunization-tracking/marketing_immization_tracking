@@ -61,8 +61,14 @@ header nav ul {
             display:block;
             width:100%;
             padding: 15px 15px 25px;
-            
+            border-bottom-left-radius:15px;
+            border-bottom-right-radius:15px;
             color:white;
+            &:hover {
+                text-decoration:none;
+                background-image:linear-gradient( transparent, @white-color);
+                color:@dark-color;
+            }
         }
         &:nth-child(3) {
             width:auto;
