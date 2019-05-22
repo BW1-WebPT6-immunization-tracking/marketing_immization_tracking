@@ -135,6 +135,8 @@ input {
         width:175px;
         margin:10px auto;
     }
+
+
 }
 
 .primary-button {
@@ -142,11 +144,21 @@ input {
     border-color:@main-color;
     color:@main-color;
     background-color:fadeOut(@light-color, 40%);
+    
+    &:hover {
+        color:@white-color;
+        background-color:transparent;
+    }
 }
 
 .default-button {
     .button();
     color:@white-color;
+    
+    &:hover {
+        color:@black-color;
+        background-color:transparent;
+    }
 }
 
 footer {
