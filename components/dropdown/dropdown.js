@@ -17,7 +17,9 @@ $(document).ready( () => {
                 else {
                     this.menu.setAttribute("style", '');
                     $(this.menu).hide();
-                    this.toggleMenu();
+                    if (this.menuButton.classList.contains('fa-angle-down')) {
+                        this.menuButton.classList.replace('fa-angle-down', 'fa-angle-up');
+                    };
                 }
             });            
         }
